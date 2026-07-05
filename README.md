@@ -13,7 +13,7 @@ Static pages for store listings and legal compliance.
 
 ## Before publish
 
-1. Replace `support@autolog.app` with your real email.
+1. Support contact: **autolog1.support@gmail.com**
 2. Replace `[Your name]` in `docs/legal/privacy-policy-*.md`.
 3. Live site: **https://tetesh.github.io/autolog-website/** (GitHub Pages)
 4. Optional custom domain (e.g. `autolog.app`) — see GitHub repo Settings → Pages
