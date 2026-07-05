@@ -15,9 +15,9 @@ Static pages for store listings and legal compliance.
 
 1. Replace `support@autolog.app` with your real email.
 2. Replace `[Your name]` in `docs/legal/privacy-policy-*.md`.
-3. Register domain (e.g. `autolog.app`) or use **GitHub Pages** / Cloudflare Pages.
-4. Update `AppInfo.WEBSITE_URL` and privacy URLs in the app if the domain differs.
-5. Activate RuStore / Play links after apps are live.
+3. Live site: **https://tetesh.github.io/autolog-website/** (GitHub Pages)
+4. Optional custom domain (e.g. `autolog.app`) — see GitHub repo Settings → Pages
+5. Update `AppInfo.WEBSITE_URL` in the app if the domain changes
 
 ## GitHub Pages (free)
 
