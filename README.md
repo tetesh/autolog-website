@@ -18,8 +18,9 @@ Static pages for store listings and legal compliance.
 ## Before publish
 
 1. Support contact: **autolog1.support@gmail.com**
-2. Replace `[Your name]` in `docs/legal/privacy-policy-*.md`.
-3. Update `AppInfo.WEBSITE_URL` in the app if the domain changes
+2. Replace `[Your name]` in `docs/legal/privacy-policy-*.md` (source of truth lives next to the app docs).
+3. Keep Pro feature list in sync with the app (incl. **AI Scan** — on-device).
+4. Update `AppInfo.WEBSITE_URL` in the app if the domain changes
 
 ## Distribution (2026-07)
 
