@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AutoLog — сервисная книжка автомобиля</title>
-  <meta name="description" content="Офлайн сервисная книжка: ТО, расходы, напоминания, каталог запчастей, парковка, виджет, AI-сканирование чеков на устройстве.">
+  <meta name="description" content="Офлайн сервисная книжка: ТО, расходы, напоминания и опциональный облачный AI Scan через Google Gemini.">
   <style>
     :root { --accent: #007AFF; --bg: #f5f5f7; --text: #1d1d1f; --muted: #6e6e73; }
     * { box-sizing: border-box; }
@@ -36,7 +36,7 @@
     <p class="tagline">Сервисная книжка автомобиля — офлайн, на вашем телефоне</p>
 
     <div class="card">
-      <p><strong>AutoLog</strong> помогает вести историю ТО, страховок, заправок и расходов, ставить напоминания и анализировать траты. Данные хранятся на устройстве; резервная копия — в файл <code>.autolog</code> или Google Drive. Документы для AI Scan обрабатываются локально — без отправки на наши серверы.</p>
+      <p><strong>AutoLog</strong> помогает вести историю ТО, страховок, заправок и расходов, ставить напоминания и анализировать траты. Основные записи хранятся на устройстве; резервная копия — в файл <code>.autolog</code> или Google Drive. Опциональный AI Scan отправляет замазанное пользователем изображение документа в Google Firebase / Gemini для облачного распознавания.</p>
 
       <h2>Основное</h2>
       <ul>
@@ -46,10 +46,11 @@
         <li>Добавление напоминания в системный календарь (опционально)</li>
         <li>Аналитика расходов</li>
         <li>Экспорт и импорт <code>.autolog</code></li>
+        <li>Локальный OCR артикула с этикетки (ArticleScanner)</li>
         <li>Русский и English</li>
       </ul>
 
-      <h2 style="margin-top:20px">AutoLog Pro</h2>
+      <h2 style="margin-top:20px">AutoLog Pro и Business</h2>
       <ul>
         <li>Несколько автомобилей</li>
         <li>PDF-отчёты</li>
@@ -59,7 +60,7 @@
         <li>Экспорт CSV</li>
         <li>Парковка — сохранение GPS по нажатию кнопки</li>
         <li>Виджет: авто, напоминания, быстрое обновление пробега</li>
-        <li>AI Scan — фото чека, полиса или акта → черновик; локальная модель на подходящих устройствах (экспериментально)</li>
+        <li>Облачный AI Scan — замазанное фото чека, полиса или акта → черновик для проверки; 30 сканирований в месяц для Pro и 500 для Business</li>
       </ul>
 
       <div class="stores">
@@ -68,7 +69,7 @@
     </div>
 
     <footer>
-      <p><a href="privacy/ru.html">Политика конфиденциальности</a> · <a href="privacy/en.html">Privacy Policy</a></p>
+      <p><a href="privacy/ru.html">Политика конфиденциальности</a> · <a href="legal/ai-scan-ru.html">Уведомление об AI Scan</a> · <a href="legal/terms-ru.html">Условия использования</a></p>
       <p>Контакт: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
       <p>© 2026 AutoLog · <span style="color:transparent;font-size:0">v2026-07-17</span></p>
     </footer>

@@ -16,10 +16,10 @@
 <body>
   <p class="meta"><a href="../en.html">← AutoLog</a> · <a href="ru.html">Русский</a></p>
   <h1>AutoLog Privacy Policy</h1>
-  <p class="meta">Effective: July 17, 2026 · Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
+  <p class="meta">Effective: July 19, 2026 · Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
 
   <h2>1. Overview</h2>
-  <p>AutoLog is an offline car service log. Core data stays on your device. The app has no backend servers.</p>
+  <p>AutoLog is an offline-first car service log with optional Google-powered cloud features. Core service-log data stays on your device. User/account identifiers, entitlement tier, AI Scan quota, reservation, and abuse-prevention records are stored in Firebase.</p>
 
   <h2>2. Data on device</h2>
   <p>Stored locally: vehicles, maintenance, insurance, fuel, expenses, reminders, <strong>part catalog (Pro)</strong>, <strong>saved parking spots — GPS coordinates when you tap “Save location” (Pro)</strong>, photos, and settings. We do not access this data.</p>
@@ -28,10 +28,13 @@
   <p><code>.autolog</code> files — you export yourself. Google Drive (optional, Pro) — backup in <strong>your</strong> Drive app folder after sign-in. On devices without Google services, cloud backup is unavailable — use <code>.autolog</code> files.</p>
 
   <h2>4. Google Sign-In</h2>
-  <p>The app receives your account email and Drive app-folder access. Governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>When you sign in for backup or AI Scan, the app receives your account email, a Firebase user identifier and, for backup, Drive app-folder access. Governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-  <h2>5. AI Scan (Pro, optional)</h2>
-  <p>Document scanning runs <strong>on your device</strong>: you take a photo or pick an image; text is recognized with on-device OCR; on capable devices an on-device <strong>Qwen2.5</strong> model (~1.6&nbsp;GB) may be downloaded from Hugging Face / litert-community (not bundled in the APK). Field extraction stays local — document photos/text are <strong>not</strong> sent to the developer’s servers for AI. After extraction you review and save the record yourself. Downloading the model needs internet and may use substantial data. Model license: <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>.</p>
+  <h2>5. AI Scan</h2>
+  <p><strong>AI Scan</strong> is an optional Pro/Business cloud feature. AutoLog provides a redaction tool. After versioned consent, the <strong>redacted/edited document image itself</strong> is sent to Google Firebase / Gemini for multimodal recognition. This is not an OCR-text-only or on-device AI process. The unedited source image is not intended to be sent to the AI recognition service.</p>
+  <p>Google returns suggested structured fields for your review. They are saved locally only if you save the record. AutoLog does not train its own model on the image and does not intentionally persist it in its own database. Google's processing and any service-side retention are governed by the applicable Google, Firebase, and Gemini terms.</p>
+  <p>Firebase stores the user/account identifier, Pro or Business tier, monthly quota usage, scan reservations, and abuse-prevention records. You are responsible for personal data left visible and for having a lawful basis to submit another person's data. See the <a href="../legal/ai-scan-en.html">AI Scan Data Notice</a>.</p>
+  <p>The local <strong>ArticleScanner</strong> for selecting article numbers from labels is a separate, free on-device OCR tool; it does not use cloud AI Scan.</p>
 
   <h2>6. Location</h2>
   <p>We <strong>do not track</strong> location in the background. GPS is used <strong>only</strong> when you save a parking spot (Pro). Coordinates stay on your device and may be included in <code>.autolog</code> or Google Drive backups. We do not send coordinates to our servers.</p>
@@ -48,11 +51,11 @@
   <h2>8. Notifications</h2>
   <p>Delivered locally: service reminders (maintenance, insurance); an occasional <strong>update your mileage</strong> nudge (about every 7 days if mileage has not been updated recently). Notification data is not sent to the developer’s servers.</p>
 
-  <h2>9. Pro payments</h2>
-  <p>Processed by Google Play. Payment details are handled by the store, not by us.</p>
+  <h2>9. Pro and Business payments</h2>
+  <p>Recurring Pro and Business subscriptions are processed by Google Play; there is no Lifetime tier. We receive purchase status, product/base-plan information, and a purchase token to verify the tier. Payment-card details are handled by Google, not by us. See the <a href="../legal/terms-en.html">Terms of Use</a>.</p>
 
   <h2>10. Deletion</h2>
-  <p>Uninstalling removes local data, including a downloaded AI model (if any). Google Drive backups remain until you delete them. Exported <code>.autolog</code> files remain wherever you save them.</p>
+  <p>Uninstalling removes local data. Google Drive backups remain until you delete them. Exported <code>.autolog</code> files remain wherever you save them. Signing out does not necessarily delete Firebase records. To request deletion of cloud records, email <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a> from the account concerned; limited records may be retained for security, billing, or legal requirements.</p>
 
   <h2>11. Children</h2>
   <p>Not intended for children under 13.</p>
