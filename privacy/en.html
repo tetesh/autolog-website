@@ -16,7 +16,7 @@
 <body>
   <p class="meta"><a href="../en.html">← AutoLog</a> · <a href="ru.html">Русский</a></p>
   <h1>AutoLog Privacy Policy</h1>
-  <p class="meta">Effective: July 19, 2026 · Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
+  <p class="meta">Effective: July 21, 2026 · Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
 
   <h2>1. Overview</h2>
   <p>AutoLog is an offline-first car service log with optional Google-powered cloud features. Core service-log data stays on your device. User/account identifiers, entitlement tier, AI Scan quota, reservation, and abuse-prevention records are stored in Firebase.</p>
@@ -27,8 +27,9 @@
   <h2>3. Backup</h2>
   <p><code>.autolog</code> files — you export yourself. Google Drive (optional, Pro) — backup in <strong>your</strong> Drive app folder after sign-in; with an active subscription, several devices on the same account merge changes through the sync file in Drive (record-level merge). A random <code>deviceId</code> in the file is used only for conflict resolution and is not sent to the developer. On devices without Google services, cloud backup is unavailable — use <code>.autolog</code> files.</p>
 
-  <h2>4. Google account and Firebase</h2>
+  <h2>4. Google account, Yandex ID, and Firebase</h2>
   <p>For Google Drive backup you sign in with Google: the app receives your account email and Drive app-folder access. For AI Scan, Firebase creates an anonymous account (no Google sign-in UI); Firebase stores a user identifier for quota and entitlement. Governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>For YooKassa subscriptions (RU/BY) you may sign in with <strong>Yandex ID</strong>. Yandex may request access to login, name, and gender (narrowest API scope). <strong>We store only the Yandex account id</strong> to restore your subscription; we do not store name, gender, or email. Payment is via YooKassa, not Yandex Pay. See the <a href="https://yandex.com/legal/confidential/">Yandex Privacy Policy</a>.</p>
 
   <h2>5. AI Scan</h2>
   <p><strong>AI Scan</strong> is an optional Pro/Business cloud feature. AutoLog provides a redaction tool. After versioned consent, the <strong>redacted/edited document image itself</strong> is sent to Google Firebase / Gemini for multimodal recognition. This is not an OCR-text-only or on-device AI process. The unedited source image is not intended to be sent to the AI recognition service.</p>
@@ -52,16 +53,16 @@
   <p>Delivered locally: service reminders (maintenance, insurance); an occasional <strong>update your mileage</strong> nudge (about every 7 days if mileage has not been updated recently). Notification data is not sent to the developer’s servers.</p>
 
   <h2>9. Pro and Business payments</h2>
-  <p>Recurring Pro and Business subscriptions are processed by Google Play; there is no Lifetime tier. We receive purchase status, product/base-plan information, and a purchase token to verify the tier. Payment-card details are handled by Google, not by us. See the <a href="../legal/terms-en.html">Terms of Use</a>.</p>
+  <p>There is no Lifetime tier. <strong>Most countries:</strong> recurring Pro/Business via <strong>Google Play</strong> (status, product/base plan, purchase token for verification; card details handled by Google). <strong>Russia and Belarus</strong> (when offered in the app): recurring Pro/Business via <strong>YooKassa</strong> (card or SBP), with optional <strong>Yandex ID</strong> for restore; we store subscription status, tier, expiry, YooKassa payment/subscription id, and <code>yandexUserId</code> if linked; card details are handled by YooKassa. See the <a href="../legal/terms-en.html">Terms of Use</a> and <a href="../subscription/en.html">Manage subscription</a>.</p>
 
   <h2>10. Deletion</h2>
-  <p>AutoLog has <strong>no separate app account</strong> and no developer-hosted data-deletion request form.</p>
+  <p>AutoLog has <strong>no separate app account</strong> and no developer-hosted data-deletion web form.</p>
   <ul>
     <li><strong>Local data</strong> — removed when you uninstall the app.</li>
     <li><strong>Google Drive</strong> — you delete backups in AutoLog settings or in your Drive.</li>
     <li><strong><code>.autolog</code> files</strong> — delete them yourself wherever you saved them.</li>
     <li><strong>AI Scan</strong> — AutoLog does not store the recognition image in its own database; Google (Gemini) processing is governed by Google’s policies.</li>
-    <li><strong>Firebase</strong> — the anonymous identifier, quota, and related service records may be retained to operate AI Scan, prevent abuse, and track entitlement; there is no separate developer deletion request for those records.</li>
+    <li><strong>Firebase</strong> — the anonymous identifier, quota, Yandex account id (if linked), and related service records may be retained to operate features and prevent abuse. To request deletion of those records, email <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a>.</li>
   </ul>
   <p>Privacy questions: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a>.</p>
 

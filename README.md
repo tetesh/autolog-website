@@ -10,6 +10,8 @@ Static pages for store listings and legal compliance.
 | `en.html` | `/en.html` — landing (EN) |
 | `privacy/ru.html` | `/privacy/ru.html` |
 | `privacy/en.html` | `/privacy/en.html` |
+| `subscription/ru.html` | `/subscription/ru.html` — how to cancel Pro (RU / YooKassa; cancel in-app) |
+| `subscription/en.html` | `/subscription/en.html` |
 
 ## Live site
 
@@ -18,14 +20,15 @@ Static pages for store listings and legal compliance.
 ## Before publish
 
 1. Support contact: **autolog1.support@gmail.com**
-2. Replace `[Your name]` in `docs/legal/privacy-policy-*.md` (source of truth lives next to the app docs).
-3. Keep Pro feature list in sync with the app (incl. **AI Scan** — cloud Gemini; **Drive sync** — Pro multi-device merge).
+2. Keep Pro feature list in sync with the app (incl. **AI Scan** — cloud Gemini; **Drive sync** — Pro multi-device merge).
+3. Privacy/terms payments section must mention **Google Play** and **YooKassa (RU/BY) + Yandex ID**.
 4. Update `AppInfo.WEBSITE_URL` in the app if the domain changes
 
 ## Distribution (2026-07)
 
 **Google Play** — единственный канал первого релиза.  
-RuStore и AppGallery — отложены.
+В России/Беларуси подписка Pro/Business через **ЮKassa** (Яндекс ID для restore); вне РФ/BY — Google Play Billing.  
+RuStore — отложен.
 
 ## Source of truth
 
@@ -36,8 +39,8 @@ Website HTML is a shorter public version — keep in sync on material changes.
 
 ```bash
 cd website
-git add index.html en.html privacy/ README.md
-git commit -m "Update site for Google Play launch"
+git add -A
+git commit -m "docs(website): YooKassa/Yandex payments in privacy, terms, subscription"
 git push
 ```
 
