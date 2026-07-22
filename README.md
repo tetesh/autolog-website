@@ -20,7 +20,7 @@ Static pages for store listings and legal compliance.
 ## Before publish
 
 1. Support contact: **autolog1.support@gmail.com**
-2. Keep Pro feature list in sync with the app (incl. **AI Scan** — cloud Gemini; **Drive sync** — Pro multi-device merge).
+2. Keep Pro feature list in sync with the app (incl. **AI Scan + AI Voice** — shared quota Pro 80 / Business 600; cloud Gemini; **Drive sync** — Pro multi-device merge).
 3. Privacy/terms payments section must mention **Google Play** and **YooKassa (RU/BY) + Yandex ID**.
 4. Update `AppInfo.WEBSITE_URL` in the app if the domain changes
 

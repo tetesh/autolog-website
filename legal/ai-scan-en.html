@@ -8,6 +8,7 @@
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; line-height: 1.65; color: #1d1d1f; }
     h1 { font-size: 1.75rem; }
     h2 { font-size: 1.125rem; margin-top: 2rem; }
+    h3 { font-size: 1rem; margin-top: 1.25rem; }
     a { color: #007AFF; }
     .meta { color: #6e6e73; font-size: 0.9rem; }
   </style>
@@ -15,26 +16,44 @@
 <body>
   <p class="meta"><a href="../en.html">← AutoLog</a> · <a href="ai-scan-ru.html">Русский</a></p>
   <h1>AutoLog AI Data Notice</h1>
-  <p class="meta">Version 1 · Effective: July 19, 2026 · <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
+  <p class="meta">Version 2 · Effective: July 22, 2026 · <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
 
   <h2>1. When this notice applies</h2>
-  <p>This notice applies when you choose to use AI features in AutoLog (currently document recognition from a photo). AI features are optional; you can enter data manually. Cloud processing must not start until you accept the current notice.</p>
+  <p>This notice applies when you choose to use AutoLog <strong>AI features</strong> — document recognition from a photo (<strong>AI Scan</strong>) or voice input (<strong>AI Voice</strong>). AI features are optional; you can enter data manually. Cloud processing must not start until you accept the current notice.</p>
+  <p><strong>AI Voice</strong> is offered only when your device supports speech recognition. If voice input is unavailable, you can still use AI Scan or enter data manually.</p>
 
   <h2>2. What is sent</h2>
-  <p>AutoLog provides a redaction tool. After you review and redact a document image, AutoLog sends the <strong>redacted/edited image itself</strong> to Google services (Firebase / Gemini) for multimodal field recognition. AI does not send OCR text instead of the image and does not run recognition only on your device. The unedited original is not intended to be sent to the AI service.</p>
-  <p>The request may include the document type, account and request identifiers, an app/device integrity token, subscription tier, and quota usage. It does not include your Google password or payment-card details.</p>
+  <h3>2.1 AI Scan (photo)</h3>
+  <p>AutoLog provides a redaction tool. After you review and redact a document image, AutoLog sends the <strong>redacted/edited image itself</strong> to Google services (Firebase / Gemini) for multimodal field recognition. AI Scan does not send OCR text instead of the image and does not run recognition only on your device. The unedited original is not intended to be sent to the AI service.</p>
+  <h3>2.2 AI Voice</h3>
+  <p>When you choose voice input, AutoLog uses the <strong>device’s speech recognition service</strong> (often Google) to turn speech into text. <strong>AutoLog v1 does not send an audio file to Gemini</strong> or to AutoLog’s servers.</p>
+  <p>After speech is recognized, AutoLog sends the <strong>transcript text</strong> (and technical metadata below) to Google services (Firebase / Gemini) for structured field suggestions — the same JSON contract as AI Scan.</p>
+  <h3>2.3 Technical metadata (both features)</h3>
+  <p>The request may include the document or record type, account and request identifiers, an app/device integrity token, subscription tier, and quota usage. It does not include your Google password or payment-card details.</p>
 
-  <h2>3. Your responsibility</h2>
-  <p>Before continuing, remove names, addresses, signatures, document numbers, payment details, faces, and any other information you do not want to disclose. You are responsible for personal data that remains visible. Do not submit another person's personal data without a lawful reason and permission.</p>
+  <h2>3. Monthly quota (shared)</h2>
+  <p>Photo AI Scan and AI Voice share <strong>one monthly AI quota</strong> per account: <strong>Pro — 80</strong> and <strong>Business — 600</strong> AI requests per UTC calendar month. Each successful Gemini request counts toward this limit. Speech recognition alone does not consume quota if Gemini is not called.</p>
 
-  <h2>4. Processing and storage</h2>
-  <p>Google processes the edited image to return structured field suggestions. Processing and any service-side retention are governed by the applicable <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and Firebase / Gemini terms. AutoLog does not use the image to train its own model and does not intentionally persist it in its own database.</p>
-  <p>Results are shown for your review and stored in AutoLog only if you save them. Firebase stores the user/account identifier, Pro or Business tier, monthly quota usage, request reservations, and abuse-prevention records needed to operate and secure AI features.</p>
+  <h2>4. AI Voice — how it works</h2>
+  <ul>
+    <li>Voice is optional and appears only when device speech recognition is available.</li>
+    <li>Speak in the <strong>language of the app interface</strong> (e.g. Russian or English as set in AutoLog).</li>
+    <li>Each listening session lasts up to <strong>about one minute</strong>, then stops automatically.</li>
+    <li><strong>Microphone permission</strong> is requested only when you start voice input.</li>
+  </ul>
 
-  <h2>5. Your choices</h2>
+  <h2>5. Your responsibility</h2>
+  <p><strong>AI Scan:</strong> Before continuing, remove names, addresses, signatures, document numbers, payment details, faces, and any other information you do not want to disclose. You are responsible for personal data that remains visible.</p>
+  <p><strong>AI Voice:</strong> You are responsible for what you say and for personal or confidential information in the transcript. Do not dictate another person's data without a lawful reason and permission.</p>
+
+  <h2>6. Processing and storage</h2>
+  <p>Google processes the edited image or transcript text to return structured field suggestions. Processing and any service-side retention are governed by the applicable <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and Firebase / Gemini terms. Audio handled by the device's speech recognition service is governed by that service's terms (often Google).</p>
+  <p>AutoLog does not use submitted images or transcripts to train its own model and does not intentionally persist them in its own database. Results are shown for your review and stored in AutoLog only if you save them. Firebase stores the user/account identifier, Pro or Business tier, monthly quota usage, request reservations, and abuse-prevention records needed to operate and secure AI features.</p>
+
+  <h2>7. Your choices</h2>
   <ul>
     <li>Cancel and continue entering data manually.</li>
-    <li>Review every recognized field before saving.</li>
+    <li>Review every AI-suggested field before saving.</li>
     <li>Material changes increment the consent version and require acceptance again.</li>
     <li>See the <a href="../privacy/en.html">Privacy Policy</a> for cloud records and deletion information.</li>
     <li>Use of AI is also subject to the <a href="terms-en.html">Terms of Use</a>, including your duty to review AI-generated suggestions.</li>

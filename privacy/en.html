@@ -16,10 +16,10 @@
 <body>
   <p class="meta"><a href="../en.html">← AutoLog</a> · <a href="ru.html">Русский</a></p>
   <h1>AutoLog Privacy Policy</h1>
-  <p class="meta">Effective: July 21, 2026 · Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
+  <p class="meta">Effective: July 22, 2026 · Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
 
   <h2>1. Overview</h2>
-  <p>AutoLog is an offline-first car service log with optional Google-powered cloud features. Core service-log data stays on your device. User/account identifiers, entitlement tier, AI Scan quota, reservation, and abuse-prevention records are stored in Firebase.</p>
+  <p>AutoLog is an offline-first car service log with optional Google-powered cloud features. Core service-log data stays on your device. User/account identifiers, entitlement tier, shared AI quota, reservation, and abuse-prevention records are stored in Firebase.</p>
 
   <h2>2. Data on device</h2>
   <p>Stored locally: vehicles, maintenance, insurance, fuel, expenses, reminders, <strong>part catalog (Pro)</strong>, <strong>saved parking spots — GPS coordinates when you tap “Save location” (Pro)</strong>, photos, and settings. We do not access this data.</p>
@@ -28,14 +28,16 @@
   <p><code>.autolog</code> files — you export yourself. Google Drive (optional, Pro) — backup in <strong>your</strong> Drive app folder after sign-in; with an active subscription, several devices on the same account merge changes through the sync file in Drive (record-level merge). A random <code>deviceId</code> in the file is used only for conflict resolution and is not sent to the developer. On devices without Google services, cloud backup is unavailable — use <code>.autolog</code> files.</p>
 
   <h2>4. Google account, Yandex ID, and Firebase</h2>
-  <p>For Google Drive backup you sign in with Google: the app receives your account email and Drive app-folder access. For AI Scan, Firebase creates an anonymous account (no Google sign-in UI); Firebase stores a user identifier for quota and entitlement. Governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>For Google Drive backup you sign in with Google: the app receives your account email and Drive app-folder access. For AI features (AI Scan and AI Voice), Firebase creates an anonymous account (no Google sign-in UI); Firebase stores a user identifier for shared quota and entitlement. Governed by the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
   <p>For YooKassa subscriptions (RU/BY) you may sign in with <strong>Yandex ID</strong>. Yandex may request access to login, name, and gender (narrowest API scope). <strong>We store only the Yandex account id</strong> to restore your subscription; we do not store name, gender, or email. Payment is via YooKassa, not Yandex Pay. See the <a href="https://yandex.com/legal/confidential/">Yandex Privacy Policy</a>.</p>
 
-  <h2>5. AI Scan</h2>
+  <h2>5. AI features (AI Scan and AI Voice)</h2>
   <p><strong>AI Scan</strong> is an optional Pro/Business cloud feature. AutoLog provides a redaction tool. After versioned consent, the <strong>redacted/edited document image itself</strong> is sent to Google Firebase / Gemini for multimodal recognition. This is not an OCR-text-only or on-device AI process. The unedited source image is not intended to be sent to the AI recognition service.</p>
-  <p>Google returns suggested structured fields for your review. They are saved locally only if you save the record. AutoLog does not train its own model on the image and does not intentionally persist it in its own database. Google's processing and any service-side retention are governed by the applicable Google, Firebase, and Gemini terms.</p>
-  <p>Firebase stores the user/account identifier, Pro or Business tier, monthly quota usage, scan reservations, and abuse-prevention records. You are responsible for personal data left visible and for having a lawful basis to submit another person's data. See the <a href="../legal/ai-scan-en.html">AI Scan Data Notice</a>.</p>
-  <p>The local <strong>ArticleScanner</strong> for selecting article numbers from labels is a separate, free on-device OCR tool; it does not use cloud AI Scan.</p>
+  <p><strong>AI Voice</strong> is optional and available only when your device supports speech recognition. When you start voice input, AutoLog requests <strong>microphone</strong> access. Speech is converted to text by the <strong>device’s speech recognition service</strong> (often Google). <strong>AutoLog v1 does not send an audio file to Gemini.</strong> The <strong>transcript text</strong> is sent to Google Firebase / Gemini for structured field suggestions. Speak in the <strong>language of the app interface</strong>; each listening session lasts up to about <strong>one minute</strong>.</p>
+  <p>Photo AI Scan and AI Voice share <strong>one monthly AI quota</strong> (Pro: 80 / Business: 600 requests per UTC calendar month). Each successful Gemini request counts; speech recognition alone does not consume quota if Gemini is not called.</p>
+  <p>Google returns suggested structured fields for your review. They are saved locally only if you save the record. AutoLog does not train its own model on submitted images or transcripts and does not intentionally persist them in its own database. Google's processing and any service-side retention are governed by the applicable Google, Firebase, and Gemini terms. Audio handled by the device's speech recognition service is governed by that service's terms (often Google).</p>
+  <p>Firebase stores the user/account identifier, Pro or Business tier, monthly shared quota usage, request reservations, and abuse-prevention records. You are responsible for personal data left visible or dictated and for having a lawful basis to submit another person's data. See the <a href="../legal/ai-scan-en.html">AI Data Notice</a>.</p>
+  <p>The local <strong>ArticleScanner</strong> for selecting article numbers from labels is a separate, free on-device OCR tool; it does not use cloud AI features.</p>
 
   <h2>6. Location</h2>
   <p>We <strong>do not track</strong> location in the background. GPS is used <strong>only</strong> when you save a parking spot (Pro). Coordinates stay on your device and may be included in <code>.autolog</code> or Google Drive backups. We do not send coordinates to our servers.</p>
@@ -44,7 +46,8 @@
   <ul>
     <li>We do not sell data</li>
     <li>We do not use ad trackers</li>
-    <li>We do not collect contacts or microphone data</li>
+    <li>We do not collect contacts</li>
+    <li>We do not record or store microphone audio on our servers — the microphone is used only when you start optional <strong>AI Voice</strong>; audio is processed by the device's speech recognition service (often Google), not sent as an audio file to Gemini or AutoLog</li>
     <li>Camera is used only when you take a photo for a record, part catalog entry, or <strong>AI Scan</strong></li>
     <li>Calendar — the app may <strong>open</strong> the system calendar with a pre-filled event; it <strong>does not read</strong> your calendar data</li>
   </ul>
@@ -61,8 +64,8 @@
     <li><strong>Local data</strong> — removed when you uninstall the app.</li>
     <li><strong>Google Drive</strong> — you delete backups in AutoLog settings or in your Drive.</li>
     <li><strong><code>.autolog</code> files</strong> — delete them yourself wherever you saved them.</li>
-    <li><strong>AI Scan</strong> — AutoLog does not store the recognition image in its own database; Google (Gemini) processing is governed by Google’s policies.</li>
-    <li><strong>Firebase</strong> — the anonymous identifier, quota, Yandex account id (if linked), and related service records may be retained to operate features and prevent abuse. Deletion of these records upon request is not provided.</li>
+    <li><strong>AI features</strong> — AutoLog does not store recognition images or voice transcripts in its own database; Google (Gemini) processing is governed by Google’s policies.</li>
+    <li><strong>Firebase</strong> — the anonymous identifier, shared AI quota, Yandex account id (if linked), and related service records may be retained to operate features and prevent abuse. Deletion of these records upon request is not provided.</li>
   </ul>
   <p>Privacy questions: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a>.</p>
 

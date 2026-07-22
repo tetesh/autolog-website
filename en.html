@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AutoLog — Car Service Book</title>
-  <meta name="description" content="Offline-first car service book with maintenance, expenses, reminders, and optional cloud AI Scan through Google Gemini.">
+  <meta name="description" content="Offline-first car service book with maintenance, expenses, reminders, and optional cloud AI (photo scan and voice) through Google Gemini.">
   <style>
     :root { --accent: #007AFF; --bg: #f5f5f7; --text: #1d1d1f; --muted: #6e6e73; }
     * { box-sizing: border-box; }
@@ -36,7 +36,7 @@
     <p class="tagline">Car service book — offline, on your phone</p>
 
     <div class="card">
-      <p><strong>AutoLog</strong> tracks maintenance, insurance, fuel, and expenses, sets reminders, and analyzes spending. Core records stay on your device; backup to a <code>.autolog</code> file or Google Drive. Optional AI Scan sends the user-redacted document image to Google Firebase / Gemini for cloud recognition.</p>
+      <p><strong>AutoLog</strong> tracks maintenance, insurance, fuel, and expenses, sets reminders, and analyzes spending. Core records stay on your device; backup to a <code>.autolog</code> file or Google Drive. Optional AI features: photo scan sends a user-redacted document image to Google Firebase / Gemini; voice input uses device speech recognition and sends transcript text to Gemini (not audio).</p>
 
       <h2>Core features</h2>
       <ul>
@@ -60,7 +60,7 @@
         <li>CSV export</li>
         <li>Parking — save GPS when you tap the button</li>
         <li>Home screen widget: car, reminders, quick mileage update</li>
-        <li>Cloud AI Scan — redacted receipt, policy, invoice, or part-label image → draft for review; 50 scans/month with Pro and 500 with Business</li>
+        <li>Cloud AI — photo scan (redacted receipt, policy, invoice, or part label → draft for review) or voice input (device speech recognition → transcript to Gemini); shared quota: 80 AI requests/month with Pro and 600 with Business</li>
       </ul>
 
       <div class="stores">
@@ -69,9 +69,9 @@
     </div>
 
     <footer>
-      <p><a href="privacy/en.html">Privacy Policy</a> · <a href="legal/ai-scan-en.html">AI Scan Data Notice</a> · <a href="legal/terms-en.html">Terms of Use</a> · <a href="subscription/en.html">Manage subscription</a></p>
+      <p><a href="privacy/en.html">Privacy Policy</a> · <a href="legal/ai-scan-en.html">AI Data Notice</a> · <a href="legal/terms-en.html">Terms of Use</a> · <a href="subscription/en.html">Manage subscription</a></p>
       <p>Contact: <a href="mailto:autolog1.support@gmail.com">autolog1.support@gmail.com</a></p>
-      <p>© 2026 AutoLog · <span style="color:transparent;font-size:0">v2026-07-21</span></p>
+      <p>© 2026 AutoLog · <span style="color:transparent;font-size:0">v2026-07-22</span></p>
     </footer>
   </div>
 </body>
