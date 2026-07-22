@@ -26,7 +26,7 @@
   <h3>2.1 AI Scan (photo)</h3>
   <p>AutoLog provides a redaction tool. After you review and redact a document image, AutoLog sends the <strong>redacted/edited image itself</strong> to Google services (Firebase / Gemini) for multimodal field recognition. AI Scan does not send OCR text instead of the image and does not run recognition only on your device. The unedited original is not intended to be sent to the AI service.</p>
   <h3>2.2 AI Voice</h3>
-  <p>When you choose voice input, AutoLog uses the <strong>device’s speech recognition service</strong> (often Google) to turn speech into text. <strong>AutoLog v1 does not send an audio file to Gemini</strong> or to AutoLog’s servers.</p>
+  <p>When you choose voice input, AutoLog uses the <strong>device’s speech recognition service</strong> (often Google) to turn speech into text. <strong>AutoLog does not send an audio file to Gemini</strong> or to AutoLog’s servers.</p>
   <p>After speech is recognized, AutoLog sends the <strong>transcript text</strong> (and technical metadata below) to Google services (Firebase / Gemini) for structured field suggestions — the same JSON contract as AI Scan.</p>
   <h3>2.3 Technical metadata (both features)</h3>
   <p>The request may include the document or record type, account and request identifiers, an app/device integrity token, subscription tier, and quota usage. It does not include your Google password or payment-card details.</p>
